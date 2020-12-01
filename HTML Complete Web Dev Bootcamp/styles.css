@@ -1,0 +1,15 @@
+@media(min-width:750pxx){
+    p{
+        display: inline-block;
+        width:200px;
+        border: 1px solid black;
+    }
+}
+
+@media(min-width:1000px){
+    p{
+        display: inline-block;
+        width:600px;
+        border: 1px solid black;
+    }
+}
