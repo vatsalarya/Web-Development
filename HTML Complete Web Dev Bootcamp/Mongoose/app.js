@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/fruitsDB"), { useNewUrlPaeser: true };
+mongoose.connect("mongodb://localhost:27017/fruitsDB"), { useNewUrlParser: true };
 
 const fruitSchema = new mongoose.Schema ({
     name: String,
@@ -25,7 +25,6 @@ Fruit.find(function(err, fruits) {
         fruits.forEach(function(fruit) {
             console.log(fruit.name);
         })
-        console.log(fruits);
     }
 
 });
