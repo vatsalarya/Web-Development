@@ -1,5 +1,5 @@
 //jshint esversion:6
-
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -16,9 +16,8 @@ const userSchema = mongoose.Schema({
     password: String
 });
 
-//But everyone can see it so we use enviornment variable
-var secret = "Thisisasecret.";
-userSchema.plugin(encrypt, {secret: secret, encryptedFields: ["password"]});
+//Secret shifted to environment variable
+userSchema.plugin(encrypt, {secret: process.env.SECRET, encryptedFields: ["password"]});
 
 const User = new mongoose.Model("User", userSchema);
 
