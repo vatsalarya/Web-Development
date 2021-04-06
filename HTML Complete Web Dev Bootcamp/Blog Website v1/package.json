@@ -11,7 +11,10 @@
     "body-parser": "^1.19.0",
     "ejs": "^2.6.1",
     "express": "^4.17.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.7"
   },
+  "devDependencies": {},
+  "keywords": [],
   "description": ""
 }
